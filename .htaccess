@@ -1,0 +1,17 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  
+  # Ensure we don't loop indefinitely
+  RewriteCond %{REQUEST_URI} !^/out/
+  
+  # Check if the requested file exists inside the /out directory
+  RewriteCond %{DOCUMENT_ROOT}/out/$1 -f [OR]
+  RewriteCond %{DOCUMENT_ROOT}/out/$1 -d
+  RewriteRule ^(.*)$ /out/$1 [L]
+  
+  # Fallback for clean URLs (routes without .html extension)
+  RewriteCond %{REQUEST_URI} !^/out/
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^(.*)$ /out/$1.html [L]
+</IfModule>
