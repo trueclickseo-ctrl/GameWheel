@@ -66,22 +66,22 @@ export default function Footer({ currentLang = "en" }: FooterProps) {
           </div>
         </div>
 
-        {/* Recent Articles */}
+        {/* Recent Articles - always English URLs, blog posts have no localized versions */}
         <div className="flex flex-col gap-3">
           <h4 className="font-extrabold text-sm uppercase tracking-widest text-retro-navy/55 dark:text-cream/55">
             Recent Blog
           </h4>
           <div className="flex flex-col gap-2 text-sm font-bold">
-            <a href={`${langPrefix}/blog/spin-wheels-for-decision-making`} className="hover:text-retro-orange transition-colors">
+            <a href="/blog/spin-wheels-for-decision-making" className="hover:text-retro-orange transition-colors">
               Wheels for Decisions
             </a>
-            <a href={`${langPrefix}/blog/party-games-for-adults`} className="hover:text-retro-orange transition-colors">
+            <a href="/blog/party-games-for-adults" className="hover:text-retro-orange transition-colors">
               Party Games
             </a>
-            <a href={`${langPrefix}/blog/spin-wheels-in-modern-education`} className="hover:text-retro-orange transition-colors">
+            <a href="/blog/spin-wheels-in-modern-education" className="hover:text-retro-orange transition-colors">
               Classroom Incentive
             </a>
-            <a href={`${langPrefix}/blog/time-boxing-to-prevent-burnout`} className="hover:text-retro-orange transition-colors">
+            <a href="/blog/time-boxing-to-prevent-burnout" className="hover:text-retro-orange transition-colors">
               Avoid Burnout
             </a>
           </div>

@@ -39,4 +39,6 @@ export const LANGUAGES: Language[] = [
   { code: "fi", name: "Finnish", nativeName: "Suomi", dir: "ltr", tier: "C" },
   { code: "no", name: "Norwegian", nativeName: "Norsk", dir: "ltr", tier: "C" },
   { code: "hr", name: "Croatian", nativeName: "Hrvatski", dir: "ltr", tier: "C" },
+  { code: "sk", name: "Slovak", nativeName: "Slovenčina", dir: "ltr", tier: "C" },
+  { code: "bg", name: "Bulgarian", nativeName: "Български", dir: "ltr", tier: "C" },
 ];
