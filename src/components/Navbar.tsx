@@ -2,9 +2,14 @@
 
 import { useState, useEffect, useRef } from "react";
 import ThemeToggle from "./ThemeToggle";
+import LanguageSwitcher from "./LanguageSwitcher";
 import { Menu, X, Disc, ChevronDown } from "lucide-react";
 
-export default function Navbar() {
+interface NavbarProps {
+  currentLang?: string;
+}
+
+export default function Navbar({ currentLang = "en" }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -90,11 +95,13 @@ export default function Navbar() {
         <a href="/contact" className="hover:text-retro-orange transition-colors">
           Contact
         </a>
+        <LanguageSwitcher currentLang={currentLang} />
         <ThemeToggle />
       </nav>
 
       {/* Mobile Toggle */}
-      <div className="flex items-center gap-4 md:hidden">
+      <div className="flex items-center gap-3 md:hidden">
+        <LanguageSwitcher currentLang={currentLang} />
         <ThemeToggle />
         <button
           onClick={() => setIsOpen(!isOpen)}
