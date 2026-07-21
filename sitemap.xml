@@ -7,6 +7,12 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://gamewheelclub.com/[lang]</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://gamewheelclub.com/about</loc>
     <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
@@ -20,12 +26,6 @@
   </url>
   <url>
     <loc>https://gamewheelclub.com/anime-fandom-wheels</loc>
-    <lastmod>2026-07-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gamewheelclub.com/ar</loc>
     <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -55,12 +55,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://gamewheelclub.com/de</loc>
-    <lastmod>2026-07-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://gamewheelclub.com/decision-wheel</loc>
     <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
@@ -68,12 +62,6 @@
   </url>
   <url>
     <loc>https://gamewheelclub.com/dice-roller</loc>
-    <lastmod>2026-07-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gamewheelclub.com/es</loc>
     <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -104,12 +92,6 @@
   </url>
   <url>
     <loc>https://gamewheelclub.com/for-teachers</loc>
-    <lastmod>2026-07-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gamewheelclub.com/fr</loc>
     <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
