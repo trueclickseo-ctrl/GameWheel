@@ -3,9 +3,115 @@ import Footer from "@/components/Footer";
 import WheelSpinner from "@/components/WheelSpinner";
 import { Sparkles, HelpCircle, Shield, Award } from "lucide-react";
 
+export const metadata = {
+  title: "GameWheelClub — Free Random Decision Wheel Spinner",
+  description: "Spin the decision wheel to make instant, fair, and unbiased choices. Free, zero-cookie, client-side random choice generator for names, yes-no, raffles, and classrooms.",
+  alternates: {
+    canonical: "https://gamewheelclub.com",
+  },
+  openGraph: {
+    title: "GameWheelClub — Free Random Decision Wheel Spinner",
+    description: "Spin the decision wheel to make instant, fair, and unbiased choices. Free, zero-cookie, client-side random choice generator.",
+    url: "https://gamewheelclub.com",
+    siteName: "GameWheelClub",
+    images: [
+      {
+        url: "https://gamewheelclub.com/icon.jpg",
+        width: 1200,
+        height: 630,
+        alt: "GameWheelClub Decision Wheel",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "GameWheelClub — Free Random Decision Wheel Spinner",
+    description: "Spin the decision wheel to make instant, fair, and unbiased choices. Free, zero-cookie, client-side random choice generator.",
+    images: ["https://gamewheelclub.com/icon.jpg"],
+  },
+};
+
 export default function Home() {
+  const jsonLdSchemas = [
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "GameWheelClub Random Decision Wheel",
+      "operatingSystem": "All",
+      "applicationCategory": "UtilitiesApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+      },
+      "description": "Free browser-based decision-wheel utility for fair, unbiased choices.",
+      "url": "https://gamewheelclub.com",
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is this decision wheel completely random?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, our wheel utilizes a secure pseudorandom number generator (PRNG) in JavaScript to guarantee completely unbiased outcomes.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "Is my option list stored on the server?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, your options never leave your device. All calculations and storage happen locally on your browser using localStorage.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use this for names and giveaways?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, many teachers, content creators, and event coordinators use GameWheelClub to draw random names or giveaway winners.",
+          },
+        },
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Spin the Decision Wheel",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Enter Your Options",
+          "text": "Add options one by one, or paste a list of names/items into the bulk editor.",
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Hit Spin",
+          "text": "Click the spin button to set the wheel in motion with retro clicking sound effects.",
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Get Your Winner",
+          "text": "The pointer selects the final option fairly and transparently. No server manipulation.",
+        },
+      ],
+    },
+  ];
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdSchemas) }}
+      />
       <Navbar />
       
       <main className="flex-1 max-w-6xl mx-auto w-full py-12 px-6">
