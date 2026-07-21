@@ -1,5 +1,13 @@
-export default function Footer() {
+import { getDictionary } from "@/i18n/dictionaries";
+
+interface FooterProps {
+  currentLang?: string;
+}
+
+export default function Footer({ currentLang = "en" }: FooterProps) {
   const currentYear = new Date().getFullYear();
+  const dict = getDictionary(currentLang);
+  const langPrefix = currentLang === "en" ? "" : `/${currentLang}`;
 
   return (
     <footer className="w-full neo-border border-b-0 border-x-0 bg-cream dark:bg-retro-navy py-12 px-6 md:px-12 mt-auto transition-colors text-retro-navy dark:text-cream">
@@ -15,7 +23,7 @@ export default function Footer() {
             <span>Game<span className="text-retro-orange">Wheel</span>Club</span>
           </div>
           <p className="text-sm font-semibold max-w-sm opacity-80 leading-relaxed">
-            Fast, accessible, and neobrutalist-designed decision wheels, randomizers, and productivity timers. Settle choices instantly.
+            {dict.heroSubtitle}
           </p>
         </div>
 
@@ -25,13 +33,13 @@ export default function Footer() {
             Use Cases
           </h4>
           <div className="flex flex-col gap-2 text-sm font-bold">
-            <a href="/for-teachers" className="hover:text-retro-orange transition-colors">
+            <a href={`${langPrefix}/for-teachers`} className="hover:text-retro-orange transition-colors">
               For Teachers
             </a>
-            <a href="/for-business" className="hover:text-retro-orange transition-colors">
+            <a href={`${langPrefix}/for-business`} className="hover:text-retro-orange transition-colors">
               For Business
             </a>
-            <a href="/for-events" className="hover:text-retro-orange transition-colors">
+            <a href={`${langPrefix}/for-events`} className="hover:text-retro-orange transition-colors">
               For Events
             </a>
           </div>
@@ -40,19 +48,19 @@ export default function Footer() {
         {/* Learn & Guides */}
         <div className="flex flex-col gap-3">
           <h4 className="font-extrabold text-sm uppercase tracking-widest text-retro-navy/55 dark:text-cream/55">
-            Learn Hub
+            {dict.learnHub}
           </h4>
           <div className="flex flex-col gap-2 text-sm font-bold">
-            <a href="/learn" className="hover:text-retro-orange transition-colors">
-              Learn Knowledge Center
+            <a href={`${langPrefix}/learn`} className="hover:text-retro-orange transition-colors">
+              {dict.learnHub}
             </a>
-            <a href="/learn/probability-statistics" className="hover:text-retro-orange transition-colors">
+            <a href={`${langPrefix}/learn/probability-statistics`} className="hover:text-retro-orange transition-colors">
               Probability & Stats
             </a>
-            <a href="/learn/encyclopedia" className="hover:text-retro-orange transition-colors">
+            <a href={`${langPrefix}/learn/encyclopedia`} className="hover:text-retro-orange transition-colors">
               Wheel Encyclopedia
             </a>
-            <a href="/learn/history-of-the-wheel" className="hover:text-retro-orange transition-colors">
+            <a href={`${langPrefix}/learn/history-of-the-wheel`} className="hover:text-retro-orange transition-colors">
               History of the Wheel
             </a>
           </div>
@@ -64,16 +72,16 @@ export default function Footer() {
             Recent Blog
           </h4>
           <div className="flex flex-col gap-2 text-sm font-bold">
-            <a href="/blog/spin-wheels-for-decision-making" className="hover:text-retro-orange transition-colors">
+            <a href={`${langPrefix}/blog/spin-wheels-for-decision-making`} className="hover:text-retro-orange transition-colors">
               Wheels for Decisions
             </a>
-            <a href="/blog/party-games-for-adults" className="hover:text-retro-orange transition-colors">
+            <a href={`${langPrefix}/blog/party-games-for-adults`} className="hover:text-retro-orange transition-colors">
               Party Games
             </a>
-            <a href="/blog/spin-wheels-in-modern-education" className="hover:text-retro-orange transition-colors">
+            <a href={`${langPrefix}/blog/spin-wheels-in-modern-education`} className="hover:text-retro-orange transition-colors">
               Classroom Incentive
             </a>
-            <a href="/blog/time-boxing-to-prevent-burnout" className="hover:text-retro-orange transition-colors">
+            <a href={`${langPrefix}/blog/time-boxing-to-prevent-burnout`} className="hover:text-retro-orange transition-colors">
               Avoid Burnout
             </a>
           </div>
@@ -86,16 +94,16 @@ export default function Footer() {
         </p>
 
         <div className="flex gap-6 text-xs font-semibold">
-          <a href="/about" className="hover:text-retro-orange transition-colors">
-            About Us
+          <a href={`${langPrefix}/about`} className="hover:text-retro-orange transition-colors">
+            {dict.navAbout}
           </a>
-          <a href="/contact" className="hover:text-retro-orange transition-colors">
-            Contact
+          <a href={`${langPrefix}/contact`} className="hover:text-retro-orange transition-colors">
+            {dict.navContact}
           </a>
-          <a href="/privacy" className="hover:text-retro-orange transition-colors">
+          <a href={`${langPrefix}/privacy`} className="hover:text-retro-orange transition-colors">
             Privacy Policy
           </a>
-          <a href="/terms" className="hover:text-retro-orange transition-colors">
+          <a href={`${langPrefix}/terms`} className="hover:text-retro-orange transition-colors">
             Terms of Service
           </a>
         </div>
