@@ -15,7 +15,6 @@ export const LANGUAGES: Language[] = [
   { code: "de", name: "German", nativeName: "Deutsch", dir: "ltr", tier: "A" },
   { code: "ja", name: "Japanese", nativeName: "日本語", dir: "ltr", tier: "A" },
   { code: "zh", name: "Chinese (Simplified)", nativeName: "简体中文", dir: "ltr", tier: "A" },
-  { code: "hi", name: "Hindi", nativeName: "हिन्दी", dir: "ltr", tier: "A" },
   { code: "ar", name: "Arabic", nativeName: "العربية", dir: "rtl", tier: "A" },
   { code: "ru", name: "Russian", nativeName: "Русский", dir: "ltr", tier: "A" },
   { code: "id", name: "Indonesian", nativeName: "Bahasa Indonesia", dir: "ltr", tier: "A" },

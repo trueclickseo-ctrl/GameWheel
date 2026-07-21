@@ -89,11 +89,27 @@ export default function HistoryOfTheWheelPage() {
             <h3 className="font-bold flex items-center gap-2 mb-2">
               <ShieldCheck className="w-4 h-4 text-retro-mint" /> References & Historical Sources
             </h3>
-            <ul className="list-disc pl-5 space-y-1 text-xs opacity-90">
-              <li>Britannica Encyclopedia: <em>Sortition & Ancient Democracy</em></li>
-              <li>Boethius (c. 524 AD): <em>The Consolation of Philosophy</em></li>
-              <li>Ian Hacking (1975): <em>The Emergence of Probability</em>, Cambridge University Press</li>
-              <li>Wikipedia: <em>Kleroterion & Rota Fortunae</em></li>
+            <ul className="list-disc pl-5 space-y-2 text-xs font-bold">
+              <li>
+                <a href="https://www.britannica.com/topic/sortition" target="_blank" rel="noopener noreferrer" className="text-retro-orange hover:underline flex items-center gap-1">
+                  Britannica Encyclopedia: Sortition & Ancient Democracy
+                </a>
+              </li>
+              <li>
+                <a href="https://www.gutenberg.org/ebooks/14328" target="_blank" rel="noopener noreferrer" className="text-retro-orange hover:underline flex items-center gap-1">
+                  Boethius (c. 524 AD): The Consolation of Philosophy
+                </a>
+              </li>
+              <li>
+                <a href="https://www.cambridge.org/core/books/abs/emergence-of-probability/contents/0E71A25BFC6053A80B6746EC8A76D70E" target="_blank" rel="noopener noreferrer" className="text-retro-orange hover:underline flex items-center gap-1">
+                  Ian Hacking (1975): The Emergence of Probability, Cambridge University Press
+                </a>
+              </li>
+              <li>
+                <a href="https://en.wikipedia.org/wiki/Kleroterion" target="_blank" rel="noopener noreferrer" className="text-retro-orange hover:underline flex items-center gap-1">
+                  Wikipedia: Kleroterion & Rota Fortunae
+                </a>
+              </li>
             </ul>
           </div>
         </article>
