@@ -1,9 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 
-const projectRoot = 'd:/Project-PDFverse/SpinVerse';
+const projectRoot = path.resolve(__dirname, '..');
 const appDir = path.join(projectRoot, 'src/app');
 const sitemapPath = path.join(projectRoot, 'public/sitemap.xml');
+const domain = 'https://gamewheelclub.com';
 
 // Helper to recursively find all page.tsx files
 function getRoutes(dir, baseRoute = '') {
@@ -46,11 +47,11 @@ let xmlContent = `<?xml version="1.0" encoding="UTF-8"?>
 for (const route of allRoutes) {
   // Normalize routes
   const cleanRoute = route === '/' ? '' : route;
-  const priority = route === '/' ? '1.0' : (route.split('/').length > 2 ? '0.7' : '0.8');
-  const changefreq = route === '/' ? 'daily' : (route.split('/').length > 2 ? 'monthly' : 'weekly');
+  const priority = route === '/' ? '1.0' : (route.startsWith('/learn') ? '0.9' : (route.split('/').length > 2 ? '0.7' : '0.8'));
+  const changefreq = route === '/' ? 'daily' : (route.startsWith('/learn') ? 'weekly' : 'monthly');
 
   xmlContent += `  <url>
-    <loc>https://spinverse.com${cleanRoute}</loc>
+    <loc>${domain}${cleanRoute}</loc>
     <lastmod>${today}</lastmod>
     <changefreq>${changefreq}</changefreq>
     <priority>${priority}</priority>
@@ -61,4 +62,4 @@ for (const route of allRoutes) {
 xmlContent += `</urlset>\n`;
 
 fs.writeFileSync(sitemapPath, xmlContent, 'utf-8');
-console.log(`Successfully generated sitemap at ${sitemapPath} with ${allRoutes.length} URLs!`);
+console.log(`Successfully generated sitemap at ${sitemapPath} with ${allRoutes.length} URLs for ${domain}!`);
