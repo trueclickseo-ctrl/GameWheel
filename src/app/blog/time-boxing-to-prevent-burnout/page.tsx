@@ -60,14 +60,14 @@ export default function TimeBoxingToPreventBurnout() {
         </div>
 
         {/* Hero Banner */}
-        <div className="neo-card bg-retro-orange p-8 md:p-12 mb-12 text-cream">
+        <div className="neo-card bg-retro-orange p-8 md:p-12 mb-12 text-retro-navy">
           <span className="px-3 py-1 bg-retro-navy text-cream font-bold text-xs uppercase tracking-wider rounded-md neo-border">
             Stress Management
           </span>
           <h1 className="text-4xl md:text-5xl font-black font-display tracking-tight mt-4 mb-6 leading-tight">
             How Time Boxing Prevents Professional Burnout
           </h1>
-          <p className="text-lg font-medium max-w-3xl leading-relaxed opacity-95">
+          <p className="text-lg font-bold max-w-3xl leading-relaxed opacity-95">
             Do your work hours bleed into your evening? Discover how setting hard time boxes for your tasks can rebuild healthy boundaries, boost output, and restore peace of mind.
           </p>
         </div>
