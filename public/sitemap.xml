@@ -181,6 +181,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://gamewheelclub.com/[lang]/[...slug]</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://gamewheelclub.com/animal-wheels/farm-animals-wheel</loc>
     <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
