@@ -45,7 +45,32 @@ export default function LanguageSwitcher({ currentLang = "en" }: LanguageSwitche
             Languages (28)
           </div>
           {LANGUAGES.map((lang) => {
-            const href = lang.code === "en" ? "/" : `/${lang.code}/`;
+            let path = "";
+            if (typeof window !== "undefined") {
+              const currentPath = window.location.pathname;
+              // Strip current lang prefix if present
+              const pathParts = currentPath.split("/").filter(Boolean);
+              const hasLangPrefix = LANGUAGES.some((l) => l.code === pathParts[0] && l.code !== "en");
+              const cleanParts = hasLangPrefix ? pathParts.slice(1) : pathParts;
+              const subPath = cleanParts.join("/");
+              
+              // Only preserve subPath if it is a supported localized page
+              const LOCALIZED_ROUTES = [
+                "about", "contact", "privacy", "terms", "games", "templates", "learn",
+                "learn/history-of-the-wheel", "wheel-of-names", "decision-wheel",
+                "yes-no-wheel", "random-number-generator", "flip-a-coin", "dice-roller",
+                "timer", "for-teachers", "for-business", "for-events"
+              ];
+              
+              if (LOCALIZED_ROUTES.includes(subPath)) {
+                path = subPath;
+              }
+            }
+
+            const href = lang.code === "en" 
+              ? (path ? `/${path}` : "/") 
+              : (path ? `/${lang.code}/${path}` : `/${lang.code}/`);
+
             const isSelected = lang.code === currentLang;
             return (
               <a
