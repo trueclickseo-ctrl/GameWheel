@@ -147,18 +147,17 @@ function ContactContent() {
 
 // ─── GAMES ──────────────────────────────────────────────────────────────────
 function GamesContent({ langPrefix }: { langPrefix: string }) {
-  // Category sub-pages only exist in English — always link to English versions
   const hubs = [
-    { name: "Sports Wheels", description: "Draft fantasy teams, select random star players, pick positions, and simulate match outcomes.", href: "/sports-wheels", icon: Trophy, bgColor: "bg-retro-orange", count: "12 Wheels" },
-    { name: "Anime & Fandom Wheels", description: "Spin for random characters, pick what anime to watch, get Disney films, or Marvel superheroes instantly.", href: "/anime-fandom-wheels", icon: Compass, bgColor: "bg-retro-blue", count: "19 Wheels" },
-    { name: "Character Creator & OC Wheels", description: "Design random characters, OCs, and avatars instantly. Spin for hairstyles, outfits, eyes, genders, and gacha ideas.", href: "/character-creator", icon: User, bgColor: "bg-retro-orange", count: "11 Wheels" },
-    { name: "Video Game Wheels", description: "Spin to pick gaming setups, agents, champions, types, challenges, and play styles. Covers Valorant, LoL, Pokémon, Roblox, and Fortnite.", href: "/video-game-wheels", icon: Gamepad2, bgColor: "bg-retro-blue", count: "9 Wheels" },
-    { name: "Party & Social Games", description: "Interactive wheels for social events, sleepovers, and parties. Spin for Truth or Dare, Charades, and funny challenges.", href: "/party-games", icon: PartyPopper, bgColor: "bg-retro-mint", count: "11 Wheels" },
-    { name: "Food Wheels", description: "Can't agree on lunch, dinner, or snacks? Spin the Food Wheels to pick a random restaurant type or dish.", href: "/food-wheels", icon: Utensils, bgColor: "bg-retro-orange", count: "5 Wheels" },
-    { name: "Geography Wheels", description: "Spin to select random countries, US states, European nations, or run the 64-country roulette challenge.", href: "/geography-wheels", icon: Globe, bgColor: "bg-retro-blue", count: "4 Wheels" },
-    { name: "Random Generators", description: "Spin pure mathematical and utility decision generators. Number wheel, hex color, percent wheel, and alphabet spinner.", href: "/generators", icon: Cpu, bgColor: "bg-retro-yellow", count: "5 Wheels" },
-    { name: "Creative & Entertainment", description: "Unlock creative inspiration. Spin to choose a movie genre, get random drawing ideas, or get TBR book prompts.", href: "/creative-wheels", icon: Sparkles, bgColor: "bg-retro-orange", count: "5 Wheels" },
-    { name: "Animals & Nature", description: "Select random animals for games, education, and drawings. Spin the animal wheels to discover what animal you are.", href: "/animal-wheels", icon: Rabbit, bgColor: "bg-retro-mint", count: "3 Wheels" },
+    { name: "Sports Wheels", description: "Draft fantasy teams, select random star players, pick positions, and simulate match outcomes.", href: `${langPrefix}/sports-wheels`, icon: Trophy, bgColor: "bg-retro-orange", count: "12 Wheels" },
+    { name: "Anime & Fandom Wheels", description: "Spin for random characters, pick what anime to watch, get Disney films, or Marvel superheroes instantly.", href: `${langPrefix}/anime-fandom-wheels`, icon: Compass, bgColor: "bg-retro-blue", count: "19 Wheels" },
+    { name: "Character Creator & OC Wheels", description: "Design random characters, OCs, and avatars instantly. Spin for hairstyles, outfits, eyes, genders, and gacha ideas.", href: `${langPrefix}/character-creator`, icon: User, bgColor: "bg-retro-orange", count: "11 Wheels" },
+    { name: "Video Game Wheels", description: "Spin to pick gaming setups, agents, champions, types, challenges, and play styles. Covers Valorant, LoL, Pokémon, Roblox, and Fortnite.", href: `${langPrefix}/video-game-wheels`, icon: Gamepad2, bgColor: "bg-retro-blue", count: "9 Wheels" },
+    { name: "Party & Social Games", description: "Interactive wheels for social events, sleepovers, and parties. Spin for Truth or Dare, Charades, and funny challenges.", href: `${langPrefix}/party-games`, icon: PartyPopper, bgColor: "bg-retro-mint", count: "11 Wheels" },
+    { name: "Food Wheels", description: "Can't agree on lunch, dinner, or snacks? Spin the Food Wheels to pick a random restaurant type or dish.", href: `${langPrefix}/food-wheels`, icon: Utensils, bgColor: "bg-retro-orange", count: "5 Wheels" },
+    { name: "Geography Wheels", description: "Spin to select random countries, US states, European nations, or run the 64-country roulette challenge.", href: `${langPrefix}/geography-wheels`, icon: Globe, bgColor: "bg-retro-blue", count: "4 Wheels" },
+    { name: "Random Generators", description: "Spin pure mathematical and utility decision generators. Number wheel, hex color, percent wheel, and alphabet spinner.", href: `${langPrefix}/generators`, icon: Cpu, bgColor: "bg-retro-yellow", count: "5 Wheels" },
+    { name: "Creative & Entertainment", description: "Unlock creative inspiration. Spin to choose a movie genre, get random drawing ideas, or get TBR book prompts.", href: `${langPrefix}/creative-wheels`, icon: Sparkles, bgColor: "bg-retro-orange", count: "5 Wheels" },
+    { name: "Animals & Nature", description: "Select random animals for games, education, and drawings. Spin the animal wheels to discover what animal you are.", href: `${langPrefix}/animal-wheels`, icon: Rabbit, bgColor: "bg-retro-mint", count: "3 Wheels" },
   ];
 
   return (
@@ -193,19 +192,18 @@ function GamesContent({ langPrefix }: { langPrefix: string }) {
 
 // ─── TEMPLATES ──────────────────────────────────────────────────────────────
 function TemplatesContent({ langPrefix }: { langPrefix: string }) {
-  // Template sub-pages only exist in English — link to English versions
   const categories = [
     {
-      name: "Food & Dining", description: "Settle dinner table debates, choose lunch options, or pick a sweet dessert.", href: "/templates/food", icon: Utensils, bgColor: "bg-retro-orange",
-      templates: [{ name: "Dinner Picker", href: "/templates/food/dinner-picker" }, { name: "Lunch Ideas", href: "/templates/food/lunch-ideas" }, { name: "Dessert Spinner", href: "/templates/food/dessert-spinner" }, { name: "Drink Decider", href: "/templates/food/drink-decider" }],
+      name: "Food & Dining", description: "Settle dinner table debates, choose lunch options, or pick a sweet dessert.", href: `${langPrefix}/templates/food`, icon: Utensils, bgColor: "bg-retro-orange",
+      templates: [{ name: "Dinner Picker", href: `${langPrefix}/templates/food/dinner-picker` }, { name: "Lunch Ideas", href: `${langPrefix}/templates/food/lunch-ideas` }, { name: "Dessert Spinner", href: `${langPrefix}/templates/food/dessert-spinner` }, { name: "Drink Decider", href: `${langPrefix}/templates/food/drink-decider` }],
     },
     {
-      name: "Party Games", description: "Host group games, make party challenges, or pick trivia topics instantly.", href: "/templates/party-games", icon: Sparkles, bgColor: "bg-retro-blue",
-      templates: [{ name: "Truth or Dare", href: "/templates/party-games/truth-or-dare" }, { name: "Would You Rather", href: "/templates/party-games/would-you-rather" }, { name: "Charades Ideas", href: "/templates/party-games/charades-ideas" }, { name: "Party Trivia", href: "/templates/party-games/party-trivia" }],
+      name: "Party Games", description: "Host group games, make party challenges, or pick trivia topics instantly.", href: `${langPrefix}/templates/party-games`, icon: Sparkles, bgColor: "bg-retro-blue",
+      templates: [{ name: "Truth or Dare", href: `${langPrefix}/templates/party-games/truth-or-dare` }, { name: "Would You Rather", href: `${langPrefix}/templates/party-games/would-you-rather` }, { name: "Charades Ideas", href: `${langPrefix}/templates/party-games/charades-ideas` }, { name: "Party Trivia", href: `${langPrefix}/templates/party-games/party-trivia` }],
     },
     {
-      name: "Classroom & Teaching", description: "Interactive classroom reward wheels, student grouping tools, and brain-break spinners.", href: "/templates/classroom", icon: GraduationCap, bgColor: "bg-retro-mint",
-      templates: [{ name: "Rewards Wheel", href: "/templates/classroom/rewards-wheel" }, { name: "Student Grouping", href: "/templates/classroom/student-grouping" }, { name: "Brain Break", href: "/templates/classroom/brain-break" }, { name: "Subject Picker", href: "/templates/classroom/subject-picker" }],
+      name: "Classroom & Teaching", description: "Interactive classroom reward wheels, student grouping tools, and brain-break spinners.", href: `${langPrefix}/templates/classroom`, icon: GraduationCap, bgColor: "bg-retro-mint",
+      templates: [{ name: "Rewards Wheel", href: `${langPrefix}/templates/classroom/rewards-wheel` }, { name: "Student Grouping", href: `${langPrefix}/templates/classroom/student-grouping` }, { name: "Brain Break", href: `${langPrefix}/templates/classroom/brain-break` }, { name: "Subject Picker", href: `${langPrefix}/templates/classroom/subject-picker` }],
     },
   ];
 
