@@ -109,7 +109,7 @@ export default async function LocalizedHomePage({ params }: LocalizedPageProps) 
         </section>
       </main>
 
-      <Footer />
+      <Footer currentLang={lang} />
     </div>
   );
 }
