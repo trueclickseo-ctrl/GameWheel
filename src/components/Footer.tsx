@@ -37,23 +37,23 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Guides & Features */}
+        {/* Learn & Guides */}
         <div className="flex flex-col gap-3">
           <h4 className="font-extrabold text-sm uppercase tracking-widest text-retro-navy/55 dark:text-cream/55">
-            Guides & Info
+            Learn Hub
           </h4>
           <div className="flex flex-col gap-2 text-sm font-bold">
-            <a href="/guides/how-random-wheels-work" className="hover:text-retro-orange transition-colors">
-              How Wheels Work
+            <a href="/learn" className="hover:text-retro-orange transition-colors">
+              Learn Knowledge Center
             </a>
-            <a href="/guides/spin-wheel-psychology" className="hover:text-retro-orange transition-colors">
-              Wheel Psychology
+            <a href="/learn/probability-statistics" className="hover:text-retro-orange transition-colors">
+              Probability & Stats
             </a>
-            <a href="/features/weighted-wheel" className="hover:text-retro-orange transition-colors">
-              Weighted Wheels
+            <a href="/learn/encyclopedia" className="hover:text-retro-orange transition-colors">
+              Wheel Encyclopedia
             </a>
-            <a href="/features/elimination-mode" className="hover:text-retro-orange transition-colors">
-              Elimination Mode
+            <a href="/learn/history-of-the-wheel" className="hover:text-retro-orange transition-colors">
+              History of the Wheel
             </a>
           </div>
         </div>

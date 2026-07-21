@@ -81,6 +81,9 @@ export default function Navbar() {
         <a href="/templates" className="hover:text-retro-orange transition-colors">
           Templates
         </a>
+        <a href="/learn" className="hover:text-retro-orange transition-colors">
+          Learn
+        </a>
         <a href="/about" className="hover:text-retro-orange transition-colors">
           About
         </a>
@@ -128,6 +131,9 @@ export default function Navbar() {
           </a>
           <a href="/templates" className="hover:text-retro-orange transition-colors">
             Templates
+          </a>
+          <a href="/learn" className="hover:text-retro-orange transition-colors">
+            Learn
           </a>
           <a href="/about" className="hover:text-retro-orange transition-colors">
             About
